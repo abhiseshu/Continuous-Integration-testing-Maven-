@@ -23,4 +23,6 @@ public class TestMainByUnit {
     @Test
     public void testMul() {assertEquals(30, main.mult(10,3));}
 
+    @Test
+    public void testdiv() {assertEquals(3,main.div(10,3));}
 }

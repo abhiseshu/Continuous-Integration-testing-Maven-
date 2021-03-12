@@ -20,6 +20,10 @@ public class Main {
         return result;
     }
 
+    public int div(int a, int b){
+        result =a/b+1;
+        return result;
+    }
 
 }
 
