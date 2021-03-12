@@ -15,6 +15,11 @@ public class Main {
         return result;
     }
 
+    public int mult(int a, int b){
+        result = a*b;
+        return result;
+    }
+
 
 }
 
