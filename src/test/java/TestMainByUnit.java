@@ -2,6 +2,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotEquals;
 
 public class TestMainByUnit {
 
@@ -25,4 +26,7 @@ public class TestMainByUnit {
 
     @Test
     public void testdiv() {assertEquals(3,main.div(10,3));}
+
+    @Test
+    public void testgetResult(){assertNotEquals(null, main.getResult());}
 }
