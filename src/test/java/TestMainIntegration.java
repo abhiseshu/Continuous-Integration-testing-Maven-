@@ -23,4 +23,16 @@ public class TestMainIntegration {
 
         assertEquals(addResultVal,main.getResult());
     }
+
+    @Test
+    public void TestChangeInResultwithSetResult(){
+
+        assertEquals(0,main.getResult());
+
+        int setResultVal = main.setResult(10);
+
+        assertEquals(10,setResultVal);
+
+        assertEquals(setResultVal,main.getResult());
+    }
 }
