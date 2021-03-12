@@ -17,4 +17,7 @@ public class TestMainByUnit {
         assertEquals(13,main.add(10,3));
     }
 
+    @Test
+    public void testSub(){assertEquals( 7,main.sub(10,3));}
+
 }
