@@ -34,6 +34,11 @@ public class Main {
         return result;
     }
 
+    public int clear(){
+        result = 0;
+        return result;
+    }
+
 
 }
 
