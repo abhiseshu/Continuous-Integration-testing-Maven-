@@ -11,7 +11,7 @@ public class Main {
     }
 
     public int sub(int a, int b){
-        result = a+b;
+        result = a-b;
         return result;
     }
 
