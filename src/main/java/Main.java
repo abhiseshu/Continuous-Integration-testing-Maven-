@@ -30,7 +30,6 @@ public class Main {
     }
 
     public int getResult(){
-        result=0;
         return result;
     }
 
