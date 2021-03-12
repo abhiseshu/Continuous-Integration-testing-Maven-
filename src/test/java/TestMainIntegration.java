@@ -25,6 +25,18 @@ public class TestMainIntegration {
     }
 
     @Test
+    public void TestChangeInResultwithdiv(){
+        assertEquals(0,main.getResult());
+
+        int addResultVal = main.div(13,1);
+
+        assertEquals(13,addResultVal);
+
+        assertEquals(addResultVal,main.getResult());
+    }
+
+
+    @Test
     public void TestChangeInResultwithSetResult(){
 
         assertEquals(0,main.getResult());
