@@ -47,4 +47,15 @@ public class TestMainIntegration {
 
         assertEquals(setResultVal,main.getResult());
     }
+
+    @Test
+    public void TestChangeInResultwithSub(){
+        assertEquals(0,main.getResult());
+
+        int subResultVal = main.sub(10,3);
+
+        assertEquals(7,subResultVal);
+
+        assertEquals(subResultVal,main.getResult());
+    }
 }
