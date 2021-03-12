@@ -34,4 +34,9 @@ public class TestMainByUnit {
     public void testsetResult(){
         assertEquals(10,main.setResult(10));
     }
+
+    @Test
+    public void testClear(){
+        assertEquals(0,main.clear());
+    }
 }
