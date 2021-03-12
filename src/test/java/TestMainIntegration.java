@@ -58,4 +58,16 @@ public class TestMainIntegration {
 
         assertEquals(subResultVal,main.getResult());
     }
+
+    @Test
+    public void TestChangeInResultwithMul(){
+        assertEquals(0,main.getResult());
+
+        int MulResultVal = main.mult(13,2);
+
+        assertEquals(26,MulResultVal);
+
+        assertEquals(MulResultVal,main.getResult());
+
+    }
 }
