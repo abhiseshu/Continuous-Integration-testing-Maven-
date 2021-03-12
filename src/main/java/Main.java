@@ -25,6 +25,11 @@ public class Main {
         return result;
     }
 
+    public int getResult(){
+        result=0;
+        return result;
+    }
+
 
 }
 
