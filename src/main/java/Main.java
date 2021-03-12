@@ -26,11 +26,11 @@ public class Main {
     }
 
     public int setResult(int a){
+        result = a;
         return a;
     }
 
     public int getResult(){
-        result=0;
         return result;
     }
 
