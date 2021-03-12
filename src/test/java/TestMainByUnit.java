@@ -29,4 +29,9 @@ public class TestMainByUnit {
 
     @Test
     public void testgetResult(){assertNotEquals(null, main.getResult());}
+
+    @Test
+    public void testsetResult(){
+        assertEquals(10,main.setResult(10));
+    }
 }
