@@ -21,7 +21,7 @@ public class Main {
     }
 
     public int div(int a, int b){
-        result =a/b+1;
+        result =a/b;
         return result;
     }
 
