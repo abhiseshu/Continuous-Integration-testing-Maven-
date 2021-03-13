@@ -1,73 +1,112 @@
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
+//Start of the Integration Test Script
 public class TestMainIntegration {
 
+    //Instances declaration
     Main main;
 
+    //resusable code variables
+    private int firstVar = 13;
+    private int secondVar = -2;
+
+    //Runs before every test case
     @Before
-    public void testSetup(){
+    public void testSetup() {
         main = new Main();
     }
 
+    //Runs after every test case
+    @After
+    public void testTearDown() {
+        main = null;
+    }
+
+//------------INTEGRATION TEST CASES-----------
+
+    //This tests for change in the result value w.r.t the add fucntion
     @Test
     public void TestChangeInResultwithAdd(){
-        assertEquals(0,main.getResult());
 
-        int addResultVal = main.add(13,-2);
+        verifyResultVal();
 
-        assertEquals(11,addResultVal);
+        int addResultVal = main.add(firstVar, secondVar);
 
-        assertEquals(addResultVal,main.getResult());
+        int expAddVal = 11;
+
+        assertEquals(expAddVal, addResultVal);
+
+        assertEquals(addResultVal, main.getResult());
     }
 
+    //This tests for change in the result value w.r.t the div fucntion
     @Test
     public void TestChangeInResultwithdiv(){
-        assertEquals(0,main.getResult());
 
-        int addResultVal = main.div(13,1);
+        verifyResultVal();
 
-        assertEquals(13,addResultVal);
+        int addResultVal = main.div(firstVar, secondVar);
 
-        assertEquals(addResultVal,main.getResult());
+        int expAddVal = -6;
+
+        assertEquals(-6, addResultVal);
+
+        assertEquals(addResultVal, main.getResult());
     }
 
-
+    //This tests for change in the result value w.r.t the set Result fucntion
     @Test
     public void TestChangeInResultwithSetResult(){
 
-        assertEquals(0,main.getResult());
+        verifyResultVal();
 
-        int setResultVal = main.setResult(10);
+        int setResultVal = main.setResult(firstVar);
 
-        assertEquals(10,setResultVal);
+        assertEquals(firstVar, setResultVal);
 
-        assertEquals(setResultVal,main.getResult());
+        assertEquals(setResultVal, main.getResult());
     }
 
+    //This tests for change in the result value w.r.t the sub fucntion
     @Test
     public void TestChangeInResultwithSub(){
-        assertEquals(0,main.getResult());
 
-        int subResultVal = main.sub(10,3);
+        verifyResultVal();
 
-        assertEquals(7,subResultVal);
+        int subResultVal = main.sub(firstVar,secondVar);
 
-        assertEquals(subResultVal,main.getResult());
+        int expSubVal = 15;
+
+        assertEquals(15, subResultVal);
+
+        assertEquals(subResultVal, main.getResult());
     }
 
+    //This tests for change in the result value w.r.t the Mul fucntion
     @Test
     public void TestChangeInResultwithMul(){
+
+        verifyResultVal();
+
+        int MulResultVal = main.mult(firstVar, secondVar);
+
+        int expMultVal = -26;
+
+        assertEquals(expMultVal, MulResultVal);
+
+        assertEquals(MulResultVal, main.getResult());
+
+    }
+
+//---------Resuable code------------
+
+    public void verifyResultVal(){
+        int expVal = 0;
         assertEquals(0,main.getResult());
-
-        int MulResultVal = main.mult(13,2);
-
-        assertEquals(26,MulResultVal);
-
-        assertEquals(MulResultVal,main.getResult());
-
     }
 }
