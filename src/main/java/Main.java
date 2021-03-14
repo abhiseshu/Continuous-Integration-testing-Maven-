@@ -1,6 +1,6 @@
 public class Main {
 
-    public int result;
+    private int result;
 
     //initialize the variable to zero
     Main(){

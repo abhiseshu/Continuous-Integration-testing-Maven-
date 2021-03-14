@@ -3,7 +3,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+
 
 //Start of the Integration Test Script
 public class TestMainIntegration {
@@ -11,9 +11,9 @@ public class TestMainIntegration {
     //Instances declaration
     Main main;
 
-    //resusable code variables
-    private int firstVar = 13;
-    private int secondVar = -2;
+    //reusable code variables
+    final int firstVar = 13;
+    final int secondVar = -2;
 
     //Runs before every test case
     @Before
@@ -29,7 +29,7 @@ public class TestMainIntegration {
 
 //------------INTEGRATION TEST CASES-----------
 
-    //This tests for change in the result value w.r.t the add fucntion
+    //This tests for change in the result value w.r.t the add function
     @Test
     public void TestChangeInResultwithAdd(){
 
@@ -52,14 +52,14 @@ public class TestMainIntegration {
 
         int addResultVal = main.div(firstVar, secondVar);
 
-        int expAddVal = -6;
+        int expDivVal = -6;
 
-        assertEquals(-6, addResultVal);
+        assertEquals(expDivVal, addResultVal);
 
         assertEquals(addResultVal, main.getResult());
     }
 
-    //This tests for change in the result value w.r.t the set Result fucntion
+    //This tests for change in the result value w.r.t the set Result function
     @Test
     public void TestChangeInResultwithSetResult(){
 
@@ -72,7 +72,7 @@ public class TestMainIntegration {
         assertEquals(setResultVal, main.getResult());
     }
 
-    //This tests for change in the result value w.r.t the sub fucntion
+    //This tests for change in the result value w.r.t the sub function
     @Test
     public void TestChangeInResultwithSub(){
 
@@ -82,12 +82,12 @@ public class TestMainIntegration {
 
         int expSubVal = 15;
 
-        assertEquals(15, subResultVal);
+        assertEquals(expSubVal, subResultVal);
 
         assertEquals(subResultVal, main.getResult());
     }
 
-    //This tests for change in the result value w.r.t the Mul fucntion
+    //This tests for change in the result value w.r.t the Mul function
     @Test
     public void TestChangeInResultwithMul(){
 
@@ -107,6 +107,6 @@ public class TestMainIntegration {
 
     public void verifyResultVal(){
         int expVal = 0;
-        assertEquals(0,main.getResult());
+        assertEquals(expVal,main.getResult());
     }
 }

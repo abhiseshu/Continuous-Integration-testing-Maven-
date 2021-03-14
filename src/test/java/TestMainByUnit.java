@@ -2,8 +2,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.*;
 
 
 //Start of the Unit Test Script
@@ -12,9 +11,9 @@ public class TestMainByUnit {
     //Instances declaration
     Main main;
 
-    //resusable code variables
-    private int firstVar = 10;
-    private int secondVar = 3;
+    //reusable code variables
+    private final int firstVar = 10;
+    private final int secondVar = 3;
 
     //Runs before every test case
     @Before
@@ -53,20 +52,25 @@ public class TestMainByUnit {
 
     //tests the div function
     @Test
-    public void testdiv() {
+    public void testDiv() {
         int expVal = 3;
         assertEquals(expVal, main.div(firstVar, secondVar));
     }
 
-    //tests the getResult function
+    //tests the getResult function whether it returns a int value or not
     @Test
-    public void testgetResult() {
-        assertNotEquals(null, main.getResult());
+    public void testGetResult() {
+        int resultVal = main.getResult();
+
+        String typeNameResult = ((Object) resultVal).getClass().getName();
+        String typeNameExpForInt = ((Object) firstVar).getClass().getName();
+
+        assertEquals(typeNameResult, typeNameExpForInt);
     }
 
     //tests the set Result function
     @Test
-    public void testsetResult() {
+    public void testSetResult() {
         assertEquals(firstVar, main.setResult(firstVar));
     }
 
